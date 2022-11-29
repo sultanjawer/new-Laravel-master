@@ -14,7 +14,7 @@
                 <div class="panel-toolbar">
                     <!-- this button is visible to Administrator only -->
                     @if (\Auth::user()->type=='admin')
-                    <a href="{{route('feeds.create')}}" class="mr-1 btn btn-info btn-xs waves-effect waves-themed" role="button" data-toggle="tooltip" data-offset="0,10" data-original-title="Buat Feeds Baru">
+                    <a href="{{route('admin.feeds.create')}}" class="mr-1 btn btn-info btn-xs waves-effect waves-themed" role="button" data-toggle="tooltip" data-offset="0,10" data-original-title="Buat Feeds Baru">
                         Feeds Baru
                     </a>
                     @endif
@@ -49,7 +49,7 @@
                                         <div class="col-md">
                                             <div class="p-3">
                                                 <div class="d-flex flex-column">
-                                                    <a href="{{route('feeds.show')}}" class="fs-lg fw-500 d-flex align-items-start">
+                                                    <a href="{{route('admin.feeds.show')}}" class="fs-lg fw-500 d-flex align-items-start">
                                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit
                                                     </a>
                                                     <div class="d-block text-muted fs-sm">
@@ -67,7 +67,7 @@
                                         <div class="col-md">
                                             <div class="p-3">
                                                 <div class="d-flex flex-column">
-                                                    <a href="{{route('feeds.show')}}" class="fs-lg fw-500 d-flex align-items-start">
+                                                    <a href="{{route('admin.feeds.show')}}" class="fs-lg fw-500 d-flex align-items-start">
                                                         Vestibulum molestie, ipsum vitae feugiat lacinia
                                                     </a>
                                                     <div class="d-block text-muted fs-sm">

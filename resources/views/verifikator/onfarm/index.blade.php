@@ -58,7 +58,7 @@
                                         </tr>
                                         <tr>
                                             <td class="fw-900">
-                                                <a href="/verification/onfarm/detail">No. Pengajuan</a>
+                                                <a href="{{route('verif.onfarm.detail')}}">No. Pengajuan</a>
                                             </td>
                                             <td>Nama Perusahaan</td>
                                             <td>No. RIPH</td>
@@ -107,7 +107,7 @@
                                         </tr>
                                         <tr>
                                             <td class="fw-900">
-                                                <a href="/verification/onfarm/detail">No. Pengajuan</a>
+                                                <a href="{{route('verif.onfarm.detail')}}">No. Pengajuan</a>
                                             </td>
                                             <td>Nama Perusahaan</td>
                                             <td>No. RIPH</td>
@@ -128,7 +128,7 @@
                                         </tr>
                                         <tr>
                                             <td class="fw-900">
-                                                <a href="/verification/onfarm/detail">No. Pengajuan</a>
+                                                <a href="{{route('verif.onfarm.detail')}}">No. Pengajuan</a>
                                             </td>
                                             <td>Nama Perusahaan</td>
                                             <td>No. RIPH</td>

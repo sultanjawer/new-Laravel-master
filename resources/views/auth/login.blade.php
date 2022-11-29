@@ -6,11 +6,23 @@
     <div class="col col-md-6 col-lg-7 hidden-sm-down">
         <h2 class="fs-xxl fw-500 mt-4 text-white">
             Simethris V.3.0
-            <small class="h3 fw-300 mt-3 mb-5 text-white opacity-100">
+            {{-- show this on production --}}
+            {{-- <small class="h3 fw-300 mt-3 mb-5 text-white opacity-100">
                 Bagi Pemegang RIPH yang akan mengakses aplikasi ini, Anda harus memiliki akun pada Aplikasi RIPH Online terlebih dahulu.
                 <br>
                 Halaman ini bukan yang Anda maksudkan? silahkan kembali ke <a href="/" class="fw-700 text-white">menu awal </a>untuk memilih halaman tujuan Anda.
                 <p>Belum memiliki akun? silahkan melakukan pendaftaran <a href="http://riph.pertanian.go.id/" class="fw-700 text-white">di sini.</a></p>
+            </small> --}}
+            {{-- hide this on production --}}
+            <small class="h3 fw-300 mt-3 mb-5 text-white opacity-100">
+                Akun Demo:
+                <ul>
+                    <li>Admin: admin@example.com</li>
+                    <li>Verifikator: verifikator@example.com</li>
+                    <li>User (Data > 2022): user@example.com</li>
+                    <li>V2 User (Data < 2022): v2@example.com</li>
+                    <li>Pass: password</li>
+                </ul>
             </small>
         </h2>
         <a href="#" class="fs-lg fw-500 text-white opacity-70">Learn more &gt;&gt;</a>

@@ -12,13 +12,14 @@ class VerificationReportController extends Controller
             'controller' => 'Report',
             'pagetitles' => 'Data',
             'subtitles' => 'Report',
-            'emphs' => 'Application Documentation',
+            'emphs' => 'Index of all reports',
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-ballot';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Report', 'Index']; //add as much array item as needed
-        return view('admin.reports.verification', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.reports.verification', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function onfarm()
@@ -27,13 +28,14 @@ class VerificationReportController extends Controller
             'controller' => 'Report',
             'pagetitles' => 'Data',
             'subtitles' => 'Report',
-            'emphs' => 'Application Documentation',
+            'emphs' => 'Index of all onfarm verification report',
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-ballot';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Report', 'Index']; //add as much array item as needed
-        return view('admin.reports.onfarm', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.reports.onfarm', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function detail_onfarm()
@@ -42,13 +44,14 @@ class VerificationReportController extends Controller
             'controller' => 'Report',
             'pagetitles' => 'Data',
             'subtitles' => 'Report',
-            'emphs' => 'Application Documentation',
+            'emphs' => 'Detail of onfarm verification',
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-ballot';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Report', 'Index']; //add as much array item as needed
-        return view('admin.reports.detail_onfarm', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.reports.detail_onfarm', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function add_sampling()
@@ -61,9 +64,10 @@ class VerificationReportController extends Controller
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-ballot';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Report', 'Index']; //add as much array item as needed
-        return view('admin.reports.add_sampling', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.reports.add_sampling', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function show_sampling()
@@ -76,9 +80,10 @@ class VerificationReportController extends Controller
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-ballot';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Report', 'Index']; //add as much array item as needed
-        return view('admin.reports.show_sampling', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.reports.show_sampling', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     //online
@@ -88,13 +93,14 @@ class VerificationReportController extends Controller
             'controller' => 'Report',
             'pagetitles' => 'Data',
             'subtitles' => 'Report',
-            'emphs' => 'Application Documentation',
+            'emphs' => 'Index of online reports',
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-ballot';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Report', 'Index']; //add as much array item as needed
-        return view('admin.reports.online', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.reports.online', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function detail_online()
@@ -103,13 +109,14 @@ class VerificationReportController extends Controller
             'controller' => 'Report',
             'pagetitles' => 'Data',
             'subtitles' => 'Report',
-            'emphs' => 'Application Documentation',
+            'emphs' => 'Detail of online report',
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-ballot';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Report', 'Index']; //add as much array item as needed
-        return view('admin.reports.detail_online', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.reports.detail_online', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function add_check()
@@ -122,9 +129,10 @@ class VerificationReportController extends Controller
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-ballot';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Report', 'Index']; //add as much array item as needed
-        return view('admin.reports.add_check', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.reports.add_check', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function show_check()
@@ -137,8 +145,9 @@ class VerificationReportController extends Controller
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-ballot';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Report', 'Index']; //add as much array item as needed
-        return view('admin.reports.show_check', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.reports.show_check', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 }

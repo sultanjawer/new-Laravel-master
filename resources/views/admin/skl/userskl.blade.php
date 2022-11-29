@@ -1,4 +1,4 @@
-@extends ('layouts.global')
+@extends ('layouts.admin')
 @section ('style')
 @endsection
 @section('content')
@@ -46,7 +46,7 @@
                                     </td>
                                     <!-- khusus status lunas, icon tertaut dengan Surat Keterangan Lunas DIgital -->
                                     <td class="text-center">
-                                        <a title="HORE! SUDAH LUNAS" class="text-success" href="/userskl/formskl">
+                                        <a title="HORE! SUDAH LUNAS" class="text-success" href="{{route('user.myskl.show')}}">
                                             <i class="fas fa-award "></i>
                                         </a>
                                     </td>

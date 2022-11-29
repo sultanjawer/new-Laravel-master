@@ -69,7 +69,7 @@
                                 @endif
 
                                 @if (Route::has('register'))
-                                <li class="nav-item">
+                                <li class="nav-item" {{ request()->is('*register*') ? 'hidden' : '' }}>
                                     <a class="nav-link btn-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                                 @endif

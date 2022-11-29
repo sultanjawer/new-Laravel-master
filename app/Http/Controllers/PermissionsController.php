@@ -66,9 +66,9 @@ class PermissionsController extends Controller
 
             return $table->make(true);
         }
-
+        $myicon = 'fal fa-ballot';
         $breadcrumb = trans('cruds.permission.title') . " " . trans('global.list');
-        return view('admin.permissions.index', compact('breadcrumb'));
+        return view('admin.permissions.index', compact('breadcrumb','myicon'));
     }
 
     public function create()
@@ -92,9 +92,9 @@ class PermissionsController extends Controller
         abort_if(Gate::denies('permission_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $grpTitle = trans('cruds');
-
+        $myicon = 'fal fa-ballot';
         $breadcrumb = trans('global.edit') . " " .  trans('cruds.permission.title');
-        return view('admin.permissions.edit', compact('permission', 'grpTitle', 'breadcrumb'));
+        return view('admin.permissions.edit', compact('permission', 'grpTitle', 'breadcrumb','myicon'));
     }
 
     public function update(UpdatePermissionRequest $request, Permission $permission)
@@ -107,9 +107,10 @@ class PermissionsController extends Controller
     public function show(Permission $permission)
     {
         abort_if(Gate::denies('permission_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        $myicon = 'fal fa-ballot';
         $grpTitle = trans('cruds');
         $breadcrumb = trans('global.show') . " " .  trans('cruds.permission.title');
-        return view('admin.permissions.show', compact('permission', 'grpTitle', 'breadcrumb'));
+        return view('admin.permissions.show', compact('permission', 'grpTitle', 'breadcrumb','myicon'));
     }
 
     public function destroy(Permission $permission)

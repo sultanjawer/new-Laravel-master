@@ -14,90 +14,96 @@ class DashboardController extends Controller
     {
         $pagedata = array(
             'controller' => 'Dashboard',
-            'pagetitles' => 'Page Title',
-            'subtitles' => 'Sub Title',
-            'emphs' => 'Short brief for this page',
+            'pagetitles' => 'Dashboard',
+            'subtitles' => 'Monitoring Realisasi',
+            'emphs' => 'Halaman ini berisi data pelaksanaan komitmen wajib tanam-produksi',
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-analytics';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Module Title', 'Page Title']; //add as much array item as needed
-        return view('admin.dashboard.index', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.dashboard.index', compact('pagedata', 'myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function verifikator()
     {
         $pagedata = array(
             'controller' => 'Dashboard',
-            'pagetitles' => 'Page Title',
-            'subtitles' => 'Sub Title',
+            'pagetitles' => 'Dashboard',
+            'subtitles' => 'Verifikator',
             'emphs' => 'Short brief for this page',
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-analytics';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Module Title', 'Page Title']; //add as much array item as needed
-        return view('admin.dashboard.verifikator', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('verifikator.dashboard.index', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function user()
     {
         $pagedata = array(
             'controller' => 'Dashboard',
-            'pagetitles' => 'Page Title',
-            'subtitles' => 'Sub Title',
+            'pagetitles' => 'Monitoring',
+            'subtitles' => 'Realisasi',
             'emphs' => 'Short brief for this page',
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-analytics';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Module Title', 'Page Title']; //add as much array item as needed
-        return view('admin.dashboard.user', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('user.dashboard.index', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function peta_admin()
     {
         $pagedata = array(
             'controller' => 'Dashboard',
-            'pagetitles' => 'Page Title',
-            'subtitles' => 'Sub Title',
+            'pagetitles' => 'Peta',
+            'subtitles' => 'Realisasi',
             'emphs' => 'Short brief for this page',
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-map';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Module Title', 'Page Title']; //add as much array item as needed
-        return view('admin.dashboard.petaadmin', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.dashboard.petaadmin', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function peta_verif()
     {
         $pagedata = array(
             'controller' => 'Dashboard',
-            'pagetitles' => 'Page Title',
-            'subtitles' => 'Sub Title',
+            'pagetitles' => 'Peta',
+            'subtitles' => 'Verifikasi',
             'emphs' => 'Short brief for this page',
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-map';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Module Title', 'Page Title']; //add as much array item as needed
-        return view('admin.dashboard.petaverif', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('verifikator.dashboard.petaverif', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function peta_user()
     {
         $pagedata = array(
             'controller' => 'Dashboard',
-            'pagetitles' => 'Page Title',
-            'subtitles' => 'Sub Title',
+            'pagetitles' => 'Peta Lahan',
+            'subtitles' => 'Realisasi dan Verifikasi',
             'emphs' => 'Short brief for this page',
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-map';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Module Title', 'Page Title']; //add as much array item as needed
-        return view('admin.dashboard.petauser', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('user.dashboard.petauser', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     //V2 for this line and below
@@ -111,12 +117,13 @@ class DashboardController extends Controller
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-analytics';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Module Title', 'Page Title']; //add as much array item as needed
-        return view('v2.dashboard.index', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('v2.dashboard.index', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
-    public function pemetaanv2()
+    public function peta_v2()
     {
         $pagedata = array(
             'controller' => 'Dashboard',
@@ -126,8 +133,9 @@ class DashboardController extends Controller
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-map';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Module Title', 'Page Title']; //add as much array item as needed
-        return view('v2.dashboard.pemetaan', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('v2.dashboard.peta', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 }

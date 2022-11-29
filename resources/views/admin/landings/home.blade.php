@@ -25,7 +25,7 @@
                     <i class="subheader-icon fal fa-rss mr-1"></i>New Feeds
                 </h2>
                 <div class="panel-toolbar">
-                    <a href="{{route('feeds')}}" data-toggle="tooltip" title data-original-title="Lihat semua Feeds" class="btn btn-xs btn-primary waves-effect waves-themed" type="button">Lihat</a>
+                    <a href="{{route('admin.feeds.index')}}" data-toggle="tooltip" title data-original-title="Lihat semua Feeds" class="btn btn-xs btn-primary waves-effect waves-themed" type="button">Lihat</a>
                 </div>
             </div>
             <div class="panel-container show">
@@ -40,7 +40,7 @@
                                             <div class="d-block">
                                                 <span class="name d-flex align-items-center">Administrator</span>
                                             </div>
-                                            <a href="{{route('feeds.show')}}" class="fs-lg fw-500 d-flex align-items-start">
+                                            <a href="{{route('admin.feeds.show')}}" class="fs-lg fw-500 d-flex align-items-start">
                                                 Nam viverra diam magna, eget lobortis orci tincidunt sed<span class="badge badge-danger ml-auto"> <span class="hidden-md-down">New</span></span>
                                             </a>
                                             <div class="d-block text-muted fs-sm">
@@ -55,7 +55,7 @@
                                             <div class="d-block">
                                                 <span class="name d-flex align-items-center">Administrator</span>
                                             </div>
-                                            <a href="{{route('feeds.show')}}" class="fs-lg fw-500 d-flex align-items-start">
+                                            <a href="{{route('admin.feeds.show')}}" class="fs-lg fw-500 d-flex align-items-start">
                                                 Nam viverra diam magna, eget lobortis orci tincidunt sed<span class="badge badge-danger ml-auto"> <span class="hidden-md-down">New</span></span>
                                             </a>
                                             <div class="d-block text-muted fs-sm">
@@ -70,7 +70,7 @@
                                             <div class="d-block">
                                                 <span class="name d-flex align-items-center">Administrator</span>
                                             </div>
-                                            <a href="{{route('feeds.show')}}" class="fs-lg fw-500 d-flex align-items-start">
+                                            <a href="{{route('admin.feeds.show')}}" class="fs-lg fw-500 d-flex align-items-start">
                                                 Nam viverra diam magna, eget lobortis orci tincidunt sed<span class="badge badge-danger ml-auto"> <span class="hidden-md-down">New</span></span>
                                             </a>
                                             <div class="d-block text-muted fs-sm">
@@ -98,14 +98,14 @@
                     <i class="subheader-icon fal fa-envelope mr-1"></i>New Messages
                 </h2>
                 <div class="panel-toolbar">
-                    <a href="{{route('messenger')}}" data-toggle="tooltip" title data-original-title="Lihat semua pesan" class="btn btn-xs btn-primary waves-effect waves-themed" type="button">Lihat</a>
+                    <a href="{{route('messenger.index')}}" data-toggle="tooltip" title data-original-title="Lihat semua pesan" class="btn btn-xs btn-primary waves-effect waves-themed" type="button">Lihat</a>
                 </div>
             </div>
             <div class="panel-container show">
                 <div class="panel-content p-0">
                     <ul class="notification">
                         <li class="unread">
-                            <a href="{{route('messenger')}}" class="d-flex align-items-center">
+                            <a href="{{route('messenger.read')}}" class="d-flex align-items-center">
                                 <span class="status mr-2">
                                     <img src="/img/avatars/farmer.png" class="profile-image rounded-circle" alt="">
                                 </span>
@@ -118,7 +118,7 @@
                             </a>
                         </li>
                         <li class="unread">
-                            <a href="{{route('messenger')}}" class="d-flex align-items-center">
+                            <a href="{{route('messenger.read')}}" class="d-flex align-items-center">
                                 <span class="status mr-2">
                                     <img src="/img/demo/avatars/avatar-j.png" class="profile-image rounded-circle" alt="">
                                 </span>
@@ -130,7 +130,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{route('messenger')}}" class="d-flex align-items-center">
+                            <a href="{{route('messenger.read')}}" class="d-flex align-items-center">
                                 <span class="status status-success mr-2">
                                     <img src="/img/demo/avatars/avatar-a.png" class="profile-image rounded-circle" alt="">
                                 </span>

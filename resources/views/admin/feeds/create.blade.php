@@ -48,7 +48,7 @@
                     </div>
                     <div class="frame-wrap">
                         <button class="btn btn-xs btn-default" data-toggle="tooltip" title data-original-title="Simpan sebagai draft">Save Draft</button>
-                        <a href="/feeds/read" class="btn btn-xs btn-default" data-toggle="tooltip" title data-original-title="Lihat tampilan">Preview</a>
+                        <a href="{{route('admin.feeds.read')}}" class="btn btn-xs btn-default" data-toggle="tooltip" title data-original-title="Lihat tampilan">Preview</a>
                     </div>
                 </div>
                 <div class="panel-content py-2 rounded-bottom border-faded border-left-0 border-right-0 border-bottom-0 text-muted d-flex">
@@ -62,7 +62,7 @@
                         </div>
                     </span>
                     <span class="ml-auto">
-                        <a href="/feeds/read" class="btn btn-xs btn-primary fw-500" data-toggle="tooltip" title data-original-title="Publikasikan feed ini ke dashboard pengguna lain.">Publish</a>
+                        <a href="{{route('admin.feeds.read')}}" class="btn btn-xs btn-primary fw-500" data-toggle="tooltip" title data-original-title="Publikasikan feed ini ke dashboard pengguna lain.">Publish</a>
                     </span>
                 </div>
                 <div class="card-footer panel-content py-2 rounded-bottom border-faded border-left-0 border-right-0 border-bottom-0 text-muted d-flex">

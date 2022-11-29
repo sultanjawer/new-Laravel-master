@@ -111,7 +111,7 @@
                                         </tr>
                                         <tr>
                                             <td class="fw-900">
-                                                <a href="/verification/online/detail">No. Pengajuan</a>
+                                                <a href="{{route('verif.online.detail')}}">No. Pengajuan</a>
                                             </td>
                                             <td>Nama Perusahaan</td>
                                             <td>No. RIPH</td>
@@ -132,7 +132,7 @@
                                         </tr>
                                         <tr>
                                             <td class="fw-900">
-                                                <a href="/verification/online/detail">No. Pengajuan</a>
+                                                <a href="{{route('verif.online.detail')}}">No. Pengajuan</a>
                                             </td>
                                             <td>Nama Perusahaan</td>
                                             <td>No. RIPH</td>

@@ -25,13 +25,14 @@ class RolesController extends Controller
             'alerttitle'    => 'Alert/information Title', //make it uppercase
             'alertcontent'  => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-key';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = [
             'App Name',
             'Roles',
             'User Roles',
         ]; //add as much array item as needed;
-        return view('admin.roles.index', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.roles.index', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function create()
@@ -44,13 +45,14 @@ class RolesController extends Controller
             'alerttitle'    => 'Alert/information Title', //make it uppercase
             'alertcontent'  => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-key';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = [
             'App Name',
             'Profile',
             'My Profile',
         ]; //add as much array item as needed;
-        return view('admin.roles.create', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.roles.create', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function show()
@@ -63,12 +65,13 @@ class RolesController extends Controller
             'alerttitle'    => 'Alert/information Title', //make it uppercase
             'alertcontent'  => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-key';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = [
             'App Name',
             'Profile',
             'My Profile',
         ]; //add as much array item as needed;
-        return view('admin.roles.show', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.roles.show', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 }
