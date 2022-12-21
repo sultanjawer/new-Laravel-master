@@ -256,6 +256,15 @@ V2 ini dimaksudkan untuk memfasilitasi
 importir/pelaku usaha wajib tanam-produksi yang
 telah menyelesaikan komitmen/kewajiban
 namun belum melaporkan dan atau mendapat SKL.
+
+edit: mungkin ada baiknya user v2 & 2022 digabung saja. jadi tidak ada perbedaan user.
+untuk itu, mungkin alur akan berubah menjadi:
+1. pengguna login dengan akun riph.
+2. jika data login tidak ditemukan (by npwp), pengguna diarahkan untuk melakukan pendaftaran di situs RIPH. jika data login ditemukan, lanjut no. 3
+3.a. untuk pengguna yang ingin melaporkan data RIPH yang telah dibuat di situs RIPH, pengguna dapat melakukan tarik data (sync) melalui menu sync data/tarik data.
+3.b. untuk pengguna yang ingin melaporkan data RIPH yang telah lama/backdate (tidak tercatat di situs RIPH terbaru), pengguna dapat membuat data komitmen sebelum mengisi data laporan realisasi.
+4. pengguna mengisi dan melengkapi data laporan realisasi sesuai nomor RIPH yang dimiliki (baik itu data RIPH melalui menu tarik data atau pengisian data RIPH manual/backdate).
+5. proses selanjutnya sama dengan proses lainnya sesuai desain.
 */
 Route::namespace('App\Http\Controllers')->middleware(['auth', 'user-access:v2'])->group(function () {
     Route::controller(HomeController::class)->group(function () {
