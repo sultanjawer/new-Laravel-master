@@ -1,3 +1,9 @@
+{{-- menu Pelaporan Komitmen:
+    1. daftar komitmen
+    2. sub page create
+    3. sub page show
+    4. sub page detail: beserta seluruh halaman terkait
+--}}
 @extends ('layouts.admin')
 @section ('style')
 @endsection
