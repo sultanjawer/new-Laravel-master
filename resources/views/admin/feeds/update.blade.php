@@ -1,4 +1,4 @@
-@extends ('layouts.global')
+@extends ('layouts.admin')
 @section ('style')
 @endsection
 @section('content')
@@ -54,12 +54,12 @@
                     </div>
                     <div class="frame-wrap">
                         <button class="btn btn-xs btn-default" data-toggle="tooltip" title data-original-title="Simpan sebagai draft">Save Draft</button>
-                        <a href="{{route('feeds.show')}}" class="btn btn-xs btn-default" data-toggle="tooltip" title data-original-title="Lihat tampilan">Preview</a>
+                        <a href="{{route('admin.feeds.show')}}" class="btn btn-xs btn-default" data-toggle="tooltip" title data-original-title="Lihat tampilan">Preview</a>
                     </div>
                 </div>
                 <div class="panel-content py-2 rounded-bottom border-faded border-left-0 border-right-0 border-bottom-0 text-muted d-flex">
                     <span class="d-flex">
-                        <button class="btn btn-xs btn-danger fw-400 mr-1" data-toggle="tooltip" title data-original-title="Hapus feed ini.">Drop</button>
+                        <button class="btn btn-xs btn-danger fw-400 mr-1" data-toggle="tooltip" title data-original-title="Hapus feed ini.">Hapus</button>
                         <div class="form-group">
                             <div class="custom-control custom-switch" data-toggle="tooltip" title data-original-title="Drop/deaktivasi feed ini sehingga tidak tampil di seluruh dashboard pengguna">
                                 <input type="checkbox" class="custom-control-input" id="checkTanam">
@@ -68,7 +68,7 @@
                         </div>
                     </span>
                     <span class="ml-auto">
-                        <a href="{{route('feeds.show')}}" class="btn btn-xs btn-primary fw-500" data-toggle="tooltip" title data-original-title="Publikasikan feed ini ke dashboard pengguna lain.">Publish</a>
+                        <a href="{{route('admin.feeds.show')}}" class="btn btn-xs btn-primary fw-500" data-toggle="tooltip" title data-original-title="Publikasikan feed ini ke dashboard pengguna lain.">Publish</a>
                     </span>
                 </div>
                 <div class="card-footer panel-content py-2 rounded-bottom border-faded border-left-0 border-right-0 border-bottom-0 text-muted d-flex">

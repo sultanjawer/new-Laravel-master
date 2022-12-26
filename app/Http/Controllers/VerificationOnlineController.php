@@ -17,9 +17,10 @@ class VerificationOnlineController extends Controller
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-ballot';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Verification', 'Online']; //add as much array item as needed
-        return view('verifikator.online.index', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('verifikator.online.index', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function detail()
@@ -32,9 +33,10 @@ class VerificationOnlineController extends Controller
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-ballot';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Verification', 'Online']; //add as much array item as needed
-        return view('verifikator.online.detail', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('verifikator.online.detail', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function add()
@@ -47,9 +49,10 @@ class VerificationOnlineController extends Controller
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-ballot';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Verification', 'Online']; //add as much array item as needed
-        return view('verifikator.online.add', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('verifikator.online.add', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function show()
@@ -62,9 +65,10 @@ class VerificationOnlineController extends Controller
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-ballot';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Verification', 'Online']; //add as much array item as needed
-        return view('verifikator.online.show', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('verifikator.online.show', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function notes()
@@ -77,8 +81,9 @@ class VerificationOnlineController extends Controller
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-ballot';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Verification', 'Online']; //add as much array item as needed
-        return view('verifikator.online.notes', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('verifikator.online.notes', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 }

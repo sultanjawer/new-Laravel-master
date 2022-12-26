@@ -20,9 +20,10 @@ class RiphController extends Controller
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fab fa-stack-overflow';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Komitmen', 'Daftar Komitmen']; //add as much array item as needed
-        return view('admin.riph.index', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.riph.index', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function create()
@@ -35,9 +36,10 @@ class RiphController extends Controller
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-edit';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Komitmen', 'Data Acuan']; //add as much array item as needed
-        return view('admin.riph.create', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.riph.create', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function show()
@@ -50,8 +52,9 @@ class RiphController extends Controller
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-edit';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Komitmen', 'Data Acuan']; //add as much array item as needed
-        return view('admin.riph.show', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.riph.show', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 }

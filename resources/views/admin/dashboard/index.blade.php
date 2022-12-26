@@ -1,4 +1,4 @@
-@extends ('layouts.global')
+@extends ('layouts.admin')
 @section ('style')
 <style>
     .bg-gradient {

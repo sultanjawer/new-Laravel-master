@@ -38,7 +38,7 @@
             <div class="card-footer">
                 <div class="d-flex align-items-center">
                     <!-- visible to Administrator/creator only -->
-                    <a href="/feeds/update" class="btn btn-xs btn-info waves-effect waves-themed">Edit</a>
+                    <a href="{{route('admin.feeds.update')}}" class="btn btn-xs btn-info waves-effect waves-themed">Edit</a>
                     <!-- visible to everyone/reader -->
                     <div class="custom-control custom-switch flex-shrink-0 ml-auto">
                         <input type="checkbox" class="custom-control-input" id="customSwitch1">

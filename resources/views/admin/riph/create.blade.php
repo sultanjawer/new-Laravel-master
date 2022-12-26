@@ -5,7 +5,7 @@
 @endsection
 @section('content')
 <div class="" data-title="System Alert" data-intro="Ini adalah Panel yang berisi informasi atau pemberitahuan penting untuk Anda." data-step="1">@include('partials.sysalert')</div>
-<form id="js-login" novalidate="" action="{{route('admin.riph')}}">
+<form id="js-login" novalidate="" action="{{route('admin.riph.index')}}">
     <div class="row">
         <div class="col-md-12">
             <div class="panel" id="panel-1">
@@ -126,7 +126,7 @@
                 </div>
                 <div class="card-footer">
                     <div class="col-md-4 ml-auto text-right">
-                        <a href="{{route('admin.riph')}}" class="btn btn-warning btn-sm mt-3">Cancel</a>
+                        <a href="{{route('admin.riph.index')}}" class="btn btn-warning btn-sm mt-3">Cancel</a>
                         <button id="js-login-btn" type="submit" class="btn btn-primary btn-sm mt-3">Submit</button>
                     </div>
                 </div>

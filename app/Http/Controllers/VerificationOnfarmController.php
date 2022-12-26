@@ -17,9 +17,10 @@ class VerificationOnfarmController extends Controller
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-ballot';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Verification', 'Onfarm']; //add as much array item as needed
-        return view('verifikator.onfarm.index', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('verifikator.onfarm.index', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function add()
@@ -32,9 +33,10 @@ class VerificationOnfarmController extends Controller
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-ballot';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Verification', 'Onfarm']; //add as much array item as needed
-        return view('verifikator.onfarm.add', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('verifikator.onfarm.add', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function show()
@@ -47,9 +49,10 @@ class VerificationOnfarmController extends Controller
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-ballot';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Verification', 'Onfarm']; //add as much array item as needed
-        return view('verifikator.onfarm.show', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('verifikator.onfarm.show', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function detail()
@@ -62,8 +65,9 @@ class VerificationOnfarmController extends Controller
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-ballot';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Verification', 'detail']; //add as much array item as needed
-        return view('verifikator.onfarm.detail', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('verifikator.onfarm.detail', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 }

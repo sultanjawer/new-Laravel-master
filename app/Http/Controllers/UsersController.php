@@ -18,9 +18,10 @@ class UsersController extends Controller
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-users';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['User', 'Registered User']; //add as much array item as needed
-        return view('admin.users.index', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.users.index', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function create()
@@ -33,9 +34,10 @@ class UsersController extends Controller
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-user-plus';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Users', 'New User']; //add as much array item as needed
-        return view('admin.users.create', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.users.create', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function show()
@@ -48,8 +50,9 @@ class UsersController extends Controller
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-user-edit';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['User', 'Registered User', 'Profile']; //add as much array item as needed
-        return view('admin.profile.index', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.profile.index', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 }

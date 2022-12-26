@@ -182,34 +182,140 @@
             @endif
 
             @if (\Auth::user()->type=='user')
-            <li class="nav-title">User tasks</li>
+            <li class="nav-title">User Tasks</li>
+            <li class="{{ request()->is('pullsync') ? 'active' : '' }}">
+                <a href=" {{route('user.pullsync')}} " title="Sync Data" data-filter-tags="pull sync riph">
+                    <i class="fal fa-sync-alt"></i>
+                    <span class="nav-link-text" data-i18n="nav.home">Pull/Sync Data RIPH</span>
+                </a>
+            </li>
+            <li class="{{ request()->is('commitment') ? 'active' : '' }}">
+                <a href="{{route('user.commitment.index')}}" title="Pelaporan Komitmen" data-filter-tags="commitment riph">
+                    <i class="fal fa-ballot-check"></i>
+                    <span class="nav-link-text" data-i18n="nav.home">Pelaporan Komitmen</span>
+                </a>
+            </li>
+            <li class="{{ request()->is('*submission*') | request()->is('*myskl*') ? 'active open' : '' }}">
+                <a href="javascript:void(0);" title="Verifikasi & SKL " data-filter-tags="pengajuan verifikasi skl">
+                    <i class="fal fa-ballot-check"></i>
+                    <span class="nav-link-text" data-i18n="nav.verifikasi_skl">Verifikasi & SKL</span>
+                </a>
+                <ul>
+                    <li class="{{ request()->is('*submission*') ? 'active' : '' }}">
+                        <a href="{{route('user.submission.index')}}" title="Daftar Pengajuan" data-filter-tags="pengajuan verifikasi">
+                            <span class="nav-link-text" data-i18n="nav.verifikasi">Daftar Pengajuan</span>
+                        </a>
+                    </li>
+                    <li class="{{ request()->is('*myskl*') ? 'active' : '' }}">
+                        <a href="{{route('user.myskl.index')}}" title="Daftar SKL" data-filter-tags="Daftar SKL">
+                            <span class="nav-link-text" data-i18n="nav.skl">Daftar SKL</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="{{ request()->is('*myfiles*') | request()->is('*mygalleries*') | request()->is('*template*') ? 'active open' : ''}}">
+                <a href="javascript:void(0);" title="Pengelolaan Berkas files management" data-filter-tags="Daftar Berkas Dokumen Galeri Foto">
+                    <i class="fal fa-folder"></i>
+                    <span class="nav-link-text" data-i18n="nav.files">Pengelolaan Berkas</span>
+                </a>
+                <ul>
+                    <li class="{{ request()->is('*myfiles*') ? 'active' : '' }}">
+                        <a href="{{route('user.myfiles.index')}}" title="My Files" data-filter-tags="daftar berkas dokumen">
+                            <span class="nav-link-text" data-i18n="nav.my_files">Berkas Saya</span>
+                        </a>
+                    </li>
+                    <li class="{{ request()->is('*mygalleries*') ? 'active' : '' }}">
+                        <a href="{{route('user.mygalleries.index')}}" title="Galeri" data-filter-tags="foto unggah">
+                            <span class="nav-link-text" data-i18n="nav.list_skl">Galeri Saya</span>
+                        </a>
+                    </li>
+                    <li class="{{ request()->is('*templates*') ? 'active' : '' }}">
+                        <a href="{{route('user.templates.index')}}" title="Master Templates" data-filter-tags="master templat contoh dokumen berkas">
+                            <span class="nav-link-text" data-i18n="nav.list_skl">Templat Master</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
             @endif
 
             @if (\Auth::user()->type=='v2')
             <li class="nav-title">User tasks</li>
+            <li class="{{ request()->is('commitment*') ? 'active' : '' }}">
+                <a href="{{route('v2.commitment.index')}}" title="Komitmen" data-filter-tags="Pelaporan Komitmen">
+                    <i class="fal fa-ballot"></i>
+                    <span class="nav-link-text" data-i18n="nav.feeds">Pelaporan Komitmen</span>
+                </a>
+            </li>
+            <li class="{{ request()->is('*keltan*') ? 'active' : '' }}">
+                <a href="{{route('v2.keltan.index')}}" title="Kelompoktani" data-filter-tags="kelompoktani">
+                    <i class="fal fa-users"></i>
+                    <span class="nav-link-text" data-i18n="nav.kelompoktani">Kelompoktani</span>
+                </a>
+            </li>
+            <li class="{{ request()->is('*submission*') | request()->is('*myskl*') ? 'active' : '' }}">
+                <a href="javascript:void(0);" title="Daftar Pengajuan" data-filter-tags="Pengajuan Verifikasi SKL">
+                    <i class="fal fa-ballot-check"></i>
+                    <span class="nav-link-text" data-i18n="nav.pengajuan">Daftar Verifikasi</span>
+                </a>
+                <ul>
+                    <li class="{{ request()->is('*submission*') ? 'active' : '' }}">
+                        <a href="{{route('v2.submission.index')}}" title="Daftar Pengajuan" data-filter-tags="pengajuan verifikasi">
+                            <span class="nav-link-text" data-i18n="nav.verifikasi">Daftar Pengajuan</span>
+                        </a>
+                    </li>
+                    <li class="{{ request()->is('*myskl*') ? 'active' : '' }}">
+                        <a href="{{route('v2.myskl.index')}}" title="Daftar SKL" data-filter-tags="Daftar SKL">
+                            <span class="nav-link-text" data-i18n="nav.skl">Daftar SKL</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="{{ request()->is('*myfiles*') | request()->is('*mygalleries*') | request()->is('*template*') ? 'active open' : ''}}">
+                <a href="javascript:void(0);" title="Pengelolaan Berkas files management" data-filter-tags="Daftar Berkas Dokumen Galeri Foto">
+                    <i class="fal fa-folder"></i>
+                    <span class="nav-link-text" data-i18n="nav.files">Pengelolaan Berkas</span>
+                </a>
+                <ul>
+                    <li class="{{ request()->is('*myfiles*') ? 'active' : '' }}">
+                        <a href="{{route('v2.myfiles.index')}}" title="My Files" data-filter-tags="daftar berkas dokumen">
+                            <span class="nav-link-text" data-i18n="nav.my_files">Berkas Saya</span>
+                        </a>
+                    </li>
+                    <li class="{{ request()->is('*mygalleries*') ? 'active' : '' }}">
+                        <a href="{{route('v2.mygalleries.index')}}" title="Galeri" data-filter-tags="foto unggah">
+                            <span class="nav-link-text" data-i18n="nav.list_skl">Galeri Saya</span>
+                        </a>
+                    </li>
+                    <li class="{{ request()->is('*templates*') ? 'active' : '' }}">
+                        <a href="{{route('v2.templates.index')}}" title="Master Templates" data-filter-tags="master templat contoh dokumen berkas">
+                            <span class="nav-link-text" data-i18n="nav.list_skl">Templat Master</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
             @endif
             <li class="nav-title">Feeds & Messages</li>
             <li class="{{ request()->is('feeds*') ? 'active' : '' }}">
-                <a href="{{route('feeds')}}" title="Feeds" data-filter-tags="feeds news information">
+                <a href="{{route('feeds.index')}}" title="Feeds" data-filter-tags="feeds news information">
                     <i class="fal fa-rss"></i>
                     <span class="nav-link-text" data-i18n="nav.feeds">Feeds</span>
                 </a>
             </li>
             <li class="{{ request()->is('messenger*') ? 'active' : '' }}">
-                <a href="{{route('messenger')}}" title="Messenger" data-filter-tags="messages pesan mail messenger">
+                <a href="{{route('messenger.index')}}" title="Messenger" data-filter-tags="messages pesan mail messenger">
                     <i class="fal fa-mailbox"></i>
                     <span class="nav-link-text" data-i18n="nav.messenger">Messenger</span>
                     <span class="dl-ref bg-primary-500 hidden-nav-function-minify hidden-nav-function-top">197 new</span>
                 </a>
             </li>
-            <!-- Administrator Tasks
+             {{-- Administrator Tasks
                 Q: Siapa yang dapat mengakses menu ini?
                 A: Administrator
                 Q: Data apa yang dilihat
                 A:  Administrator   = CRUD
                     Verifikator     = Restrict
                     User            = Restrict
-            -->
+             --}}
             @if (\Auth::user()->type=='admin')
             <li class="nav-title">Administrator Tasks</li>
             <li class="{{ request()->is('admin/manage*') ? 'active' : '' }}">
@@ -236,18 +342,17 @@
                 </ul>
             </li>
             <li class="{{ request()->is('*riph*') ? 'active' : '' }}">
-                <a href="{{route('admin.riph')}}" title="Master Data RIPH" data-filter-tags="master data riph">
+                <a href="{{route('admin.riph.index')}}" title="Master Data RIPH" data-filter-tags="master data riph">
                     <i class="fab fa-stack-overflow"></i>
                     <span class="nav-link-text" data-i18n="nav.home">Master Data RIPH</span>
                 </a>
             </li>
             <li class="{{ request()->is('*files*') ? 'active' : '' }}">
-                <a href="{{route('admin.files')}}" title="Master Templat" data-filter-tags="create master template">
+                <a href="{{route('admin.files.index')}}" title="Master Templat" data-filter-tags="create master template">
                     <i class="fal fa-file-upload"></i>
                     <span class="nav-link-text" data-i18n="nav.master_template">Master Template</span>
                 </a>
             </li>
-
             <li class="{{ request()->is('*report*') ? 'active open' : '' }}">
                 <a href="javascript:void(0);" title="Data Report" data-filter-tags="data report laporan">
                     <i class="fal fa-landmark"></i>
@@ -284,10 +389,9 @@
                     <span class="nav-link-text" data-i18n="nav.skl">SKL</span>
                 </a>
                 <ul>
-                    <li class="{{ request()->is('admin/skl') ? 'active' : '' }}">
-                        <a href="{{route('admin.sklindex')}}" title="on line verification" data-filter-tags="on line verification">
-                            <span class="nav-link-text" data-i18n="nav.admin_skl_list">SKL</span>
-                            <span class="dl-ref bg-primary-500 hidden-nav-function-minify hidden-nav-function-top">197 request</span>
+                    <li class="{{ request()->is('admin/skl/index') ? 'active' : '' }}">
+                        <a href="{{route('admin.skl.index')}}" title="on line verification" data-filter-tags="on line verification">
+                            <span class="nav-link-text" data-i18n="nav.admin_skl_list">SKL List</span>
                         </a>
                     </li>
                     <li class="{{ request()->is('*skl/create') ? 'active' : '' }}">
@@ -298,27 +402,6 @@
                 </ul>
             </li>
             @endif
-            <!-- Documentation
-                Q: Siapa yang dapat mengakses menu ini?
-                A: Administrator
-                Q: Data apa yang dilihat
-                A:  Administrator   = Read
-                    Verifikator     = Read
-                    User            = Read
-            -->
-            <li class="nav-title">Documentations</li>
-            <li class="{{ request()->is('v2/howto*') ? 'active' : '' }}">
-                <a href="/v2/howto" title="How To" data-filter-tags="how to manual tutorial">
-                    <i class="fal fa-books"></i>
-                    <span class="nav-link-text" data-i18n="nav.feeds">How To's</span>
-                </a>
-            </li>
-            <li class="{{ request()->is('v2/build*') ? 'active' : '' }}">
-                <a href="/v2/build" title="Build Note" data-filter-tags="build note version control">
-                    <i class="fal fa-code"></i>
-                    <span class="nav-link-text" data-i18n="nav.build">Build Notes</span>
-                </a>
-            </li>
             <li class="nav-title">Settings</li>
             <!-- Profile & Password
                 Q: Siapa yang dapat mengakses menu ini?
@@ -328,54 +411,40 @@
                     Verifikator     = CRUD
                     User            = CRUD
             -->
-            <li class="{{ request()->is('profile*') ? 'active open' : '' }}">
-                <a href="javascript:void(0);" title="Profiles" data-filter-tags="Profiles">
+            <li class="{{ request()->is('myprofile*') ? 'active' : '' }}">
+                <a href="{{route('myprofile')}}" title="My Profile" data-filter-tags="my profile">
                     <i class="fal fa-address-card"></i>
-                    <span class="nav-link-text" data-i18n="nav.users_management">Profiles</span>
+                    <span class="nav-link-text" data-i18n="nav.category">My Profile</span>
                 </a>
-                <ul>
-                    <li class="{{ request()->is('*myprofile*') ? 'active' : '' }}">
-                        <a href="{{route('myprofile')}}" title="My Profile" data-filter-tags="my profile">
-                            <span class="nav-link-text" data-i18n="nav.category">My Profile</span>
-                        </a>
-                    </li>
-                    <li class="{{ request()->is('*password') ? 'active' : '' }}">
-                        <a href="{{route('password')}}" title="Change Password" data-filter-tags="change password">
-                            <span class="nav-link-text" data-i18n="nav.change_password">Change Password</span>
-                        </a>
-                    </li>
-                </ul>
             </li>
-            <li class="nav-title">Navigation Title</li>
-            <li>
-                <a href="#" title="Category" data-filter-tags="category">
-                    <i class="fal fa-file"></i>
-                    <span class="nav-link-text" data-i18n="nav.category">Category</span>
+            <li class="{{ request()->is('*password*') ? 'active' : '' }}">
+                <a href="{{route('password')}}" title="Change Password" data-filter-tags="change password">
+                    <i class="fal fa-key"></i>
+                    <span class="nav-link-text" data-i18n="nav.change_password">Change Password</span>
                 </a>
-                <ul>
-                    <li>
-                        <a href="javascript:void(0);" title="Menu child" data-filter-tags="utilities menu child">
-                            <span class="nav-link-text" data-i18n="nav.utilities_menu_child">Sub-category</span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a href="javascript:void(0);" title="Sublevel Item" data-filter-tags="utilities menu child sublevel item">
-                                    <span class="nav-link-text" data-i18n="nav.utilities_menu_child_sublevel_item">Sublevel Item</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0);" title="Another Item" data-filter-tags="utilities menu child another item">
-                                    <span class="nav-link-text" data-i18n="nav.utilities_menu_child_another_item">Another Item</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="disabled">
-                        <a href="javascript:void(0);" title="Disabled item" data-filter-tags="utilities disabled item">
-                            <span class="nav-link-text" data-i18n="nav.utilities_disabled_item">Disabled item</span>
-                        </a>
-                    </li>
-                </ul>
+            </li>
+
+
+            <!-- Documentation
+                Q: Siapa yang dapat mengakses menu ini?
+                A: Administrator
+                Q: Data apa yang dilihat
+                A:  Administrator   = Read
+                    Verifikator     = Read
+                    User            = Read
+            -->
+            <li class="nav-title">Documentations</li>
+            <li class="{{ request()->is('howto*') ? 'active' : '' }}">
+                <a href="{{route('howto')}}" title="How To" data-filter-tags="how to manual tutorial">
+                    <i class="fal fa-books"></i>
+                    <span class="nav-link-text" data-i18n="nav.feeds">How To's</span>
+                </a>
+            </li>
+            <li class="{{ request()->is('build*') ? 'active' : '' }}">
+                <a href="{{route('builds')}}" title="Build Note" data-filter-tags="build note version control">
+                    <i class="fal fa-code"></i>
+                    <span class="nav-link-text" data-i18n="nav.build">Build Notes</span>
+                </a>
             </li>
         </ul>
         <div class="filter-message js-filter-message bg-success-600"></div>

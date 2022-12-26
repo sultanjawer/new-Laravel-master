@@ -1,7 +1,11 @@
 <div class="subheader">
 	<h1 class="subheader-title">
-		<i class='subheader-icon fal fa-chart-area mr-1'></i> {{ $pagedata['controller'] ?? config('app.name', 'Application') }} <span class='fw-300 ml-2'>{{ $pagedata['controller'] ?? config('app.name', 'Application') }} </span>
-		<small>{{ $pagedata['controller'] ?? config('app.name', 'Application') }}</small>
+		<i class='subheader-icon mr-1 {{$myicon}} '></i> 
+		<span class='fw-300 mr-1'>{{ $pagedata['pagetitles'] ?? config('app.name', 'Application') }}</span>
+		<span>
+			{{ $pagedata['subtitles'] ?? config('app.name', 'Application') }}
+		</span>
+		<small>{{ $pagedata['emphs'] ?? config('app.name', 'Application') }}</small>
 	</h1>
 	<div class="subheader-block d-lg-flex align-items-center">
 		<div class="">

@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 class MessengerController extends Controller
 {
-    //========== v3 starting from this line ==========//
+    
     public function index()
     {
         $pagedata = array(
@@ -20,69 +20,74 @@ class MessengerController extends Controller
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-mailbox';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Messenger', 'All Messages']; //add as much array item as needed
-        return view('admin.messenger.index', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.messenger.index', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function inbox()
     {
         $pagedata = array(
             'controller' => 'Messenger',
-            'pagetitles' => 'Kotak',
-            'subtitles' => 'Masuk',
+            'pagetitles' => 'Pesan',
+            'subtitles' => 'Kotak Masuk',
             'emphs' => 'Daftar Seluruh Pesan Masuk untuk Anda',
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-inbox-in';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Messenger', 'Inbox']; //add as much array item as needed
-        return view('admin.messenger.index', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.messenger.index', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function outbox()
     {
         $pagedata = array(
             'controller' => 'Messenger',
-            'pagetitles' => 'Kotak',
-            'subtitles' => 'Keluar',
+            'pagetitles' => 'Pesan',
+            'subtitles' => 'Kotak Keluar',
             'emphs' => 'Daftar Seluruh Pesan Keluar dari Anda',
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-paper-plane';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Messenger', 'Outbox']; //add as much array item as needed
-        return view('admin.messenger.index', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.messenger.index', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function trash()
     {
         $pagedata = array(
             'controller' => 'Messenger',
-            'pagetitles' => 'Kotak',
-            'subtitles' => 'Sampah',
+            'pagetitles' => 'Pesan',
+            'subtitles' => 'Kotak Sampah',
             'emphs' => 'Daftar Seluruh Pesan Dibuang',
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-trash';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Messenger', 'Trahsed']; //add as much array item as needed
-        return view('admin.messenger.index', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.messenger.index', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function create()
     {
         $pagedata = array(
             'controller' => 'Messenger',
-            'pagetitles' => 'New',
-            'subtitles' => 'Message',
+            'pagetitles' => 'Pesan',
+            'subtitles' => 'Buat Pesan Baru',
             'emphs' => 'Buat Pesan Baru',
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-edit';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Messenger', 'New Message']; //add as much array item as needed
-        return view('admin.messenger.create', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.messenger.create', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 
     public function read()
@@ -90,13 +95,14 @@ class MessengerController extends Controller
         $pagedata = array(
             'controller' => 'Messenger',
             'pagetitles' => 'Pesan',
-            'subtitles' => 'Masuk',
+            'subtitles' => 'Baca Pesan Masuk',
             'emphs' => 'Baca Pesan',
             'alerttitle' => 'Alert/information Title', //make it uppercase
             'alertcontent' => 'Alert/information should appear in here.',
         );
+        $myicon = 'fal fa-envelope-open';
         $alertcontent = 'Apa yang ingin disampaikan pada halaman ini.';
         $breadcrumbs = ['Simethris', 'Messenger', 'Read']; //add as much array item as needed
-        return view('admin.messenger.read', compact('pagedata'), ['breadcrumb' => $breadcrumbs]);
+        return view('admin.messenger.read', compact('pagedata','myicon'), ['breadcrumb' => $breadcrumbs]);
     }
 }

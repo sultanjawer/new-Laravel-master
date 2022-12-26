@@ -570,10 +570,10 @@
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-md-6 my-1">
-                            <a href="/verification/online" class="btn btn-sm btn-primary btn-block waves-effect waves-themed" data-toggle="tooltip" data-offset="0,10" data-original-title="Simpan dan submit data"><i class="fas fa-save"></i> Simpan</a>
+                            <a href="{{route('verif.online')}}" class="btn btn-sm btn-primary btn-block waves-effect waves-themed" data-toggle="tooltip" data-offset="0,10" data-original-title="Simpan dan submit data"><i class="fas fa-save"></i> Simpan</a>
                         </div>
                         <div class="col-md-6 my-1">
-                            <a href="/verification/online" class="btn btn-sm btn-warning btn-block waves-effect waves-themed" data-toggle="tooltip" data-offset="0,10" data-original-title="Batalkan"><i class="fas fa-undo"></i> Batalkan</a>
+                            <a href="{{route('verif.online')}}" class="btn btn-sm btn-warning btn-block waves-effect waves-themed" data-toggle="tooltip" data-offset="0,10" data-original-title="Batalkan"><i class="fas fa-undo"></i> Batalkan</a>
                         </div>
                     </div>
                 </div>
