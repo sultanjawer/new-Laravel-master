@@ -122,12 +122,12 @@
                     @endif
                     @if (\Auth::user()->type=='user')
                     <li class="{{ request()->is('*dashboard/data*') ? 'active' : '' }}">
-                        <a href="{{route('user.dashboard.data')}}" title="Monitoring Realisasi" data-filter-tags="dashboard data monitoring">
+                        <a href="#" title="Monitoring Realisasi" data-filter-tags="dashboard data monitoring">
                             <span class="nav-link-text" data-i18n="nav.dashboard">Monitoring Realisasi</span>
                         </a>
                     </li>
                     <li class="{{ request()->is('*dashboard/peta*') ? 'active' : '' }}">
-                        <a href="{{route('user.dashboard.peta')}}" title="Peta Realisasi" data-filter-tags="dashboard pemetaan">
+                        <a href="#" title="Peta Realisasi" data-filter-tags="dashboard pemetaan">
                             <span class="nav-link-text" data-i18n="nav.dashboard_pemetaan">Peta Realisasi</span>
                         </a>
                     </li>

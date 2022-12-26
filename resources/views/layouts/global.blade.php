@@ -53,7 +53,8 @@
 		saat tampil di android webview
 	-->
 
-<body class="mod-bg-1 mod-nav-link footer-function-fixed nav-function-minify nav-function-top header-function-fixed">
+{{-- <body class="mod-bg-1 mod-nav-link footer-function-fixed nav-function-minify nav-function-top header-function-fixed"> --}}
+<body class="mod-bg-2 mod-nav-link">
     <!-- BEGIN Page Wrapper -->
     <div class="page-wrapper">
         <div class="page-inner">
